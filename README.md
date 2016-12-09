@@ -20,9 +20,9 @@ To run in a Spark cluster example:
 
 Update the following according to your Spark master and your slack key
 
-3) `spark-submit --conf spark.driver.userClassPathFirst=true --class com.supergloo.SlackStreamingApp --master spark://MASTER:7077 ./target/scala-2.11/spark-streaming-example-assembly-1.0.jar local[5] YOUR_SLACK_KEY`
+3) `spark-submit --conf spark.driver.userClassPathFirst=true --class com.supergloo.SlackStreamingApp ./target/scala-2.11/spark-streaming-example-assembly-1.0.jar spark://MASTER:7077 YOUR_SLACK_KEY`
 
 
 For example:
 
-`spark-submit  --conf spark.driver.userClassPathFirst=true --class com.supergloo.SlackStreamingApp --master spark://tmcgrath-rmbp15.local:7077 ./target/scala-2.10/spark-streaming-example-assembly-1.0.jar local[5] xoxp-28540311056-28536367895-285541`
+`spark-submit  --conf spark.driver.userClassPathFirst=true --class com.supergloo.SlackStreamingApp ./target/scala-2.10/spark-streaming-example-assembly-1.0.jar spark://tmcgrath-rmbp15.local:7077 xoxp-28540311056-28536367895-285541`
