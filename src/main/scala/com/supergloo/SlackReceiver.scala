@@ -17,17 +17,16 @@ class SlackReceiver(token: String) extends Receiver[String](StorageLevel.MEMORY_
                                    with Runnable with Logging {
  
   private val slackUrl = "https://slack.com/api/rtm.start"
- 
-  @transient
-  private var thread: Thread = _
- 
-  override def onStart(): Unit = {
-     thread = new Thread(this)
-     thread.start()
+
+  def onStart() {
+    // Start the thread that receives data over a connection
+    new Thread("Socket Receiver") {
+      override def run() { receive() }
+    }.start()
   }
  
   override def onStop(): Unit = {
-     thread.interrupt()
+//     thread.interrupt()
   }
  
   override def run(): Unit = {

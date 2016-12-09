@@ -10,14 +10,12 @@ excludedJars in assembly <<= (fullClasspath in assembly) map { cp =>
 	    }
 }
  
-scalaVersion := "2.11.8"
+scalaVersion := "2.10.6"
  
 resolvers += "jitpack" at "https://jitpack.io"
  
 libraryDependencies ++= Seq(
-//  "org.apache.spark" %% "spark-streaming" % "1.6.3" % "provided",
-// comment above line and uncomment the following to run in sbt
-  "org.apache.spark" %% "spark-streaming" % "1.6.3",
+  "org.apache.spark" %% "spark-streaming" % "1.6.3" % "provided",
   "org.scalaj" %% "scalaj-http" % "2.3.0",
   "org.jfarcand" % "wcs" % "1.5" 
 )
