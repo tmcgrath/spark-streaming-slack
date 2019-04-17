@@ -2,6 +2,8 @@
 
 This assumes at least some previous experience with Apache Spark, but let me know if you have any questions.
 
+See the [Spark Streaming from Slack tutorial](https://supergloo.com/spark-streaming/spark-streaming-example-from-slack/) for more information.
+
 ## Requirements
 1) Get a Slack API key
 
